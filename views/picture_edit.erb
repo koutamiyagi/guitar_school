@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PICTURE EDIT</title>
+    	<link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+
+      <% @resPicture.each do |row| %>
+
+        <div class="item"><a href="assets/img/<%= row['filename'] %>" target="_blank"><img src="assets/img/<%= row['filename'] %>" class="img_res"></a></div>
+        <form class="delete_picture" action="/picture_delete" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="hidden" name="picture_id" value="<%= row['id'] %>">
+          <input type="submit" value="Delete">
+        </form>
+      <% end %>
+
+
+
+
+
+    <a href="/logout">ログアウト</a>
+  </body>
+</html>

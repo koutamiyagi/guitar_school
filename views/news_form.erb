@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NEWS FORM</title>
+  </head>
+  <body>
+    <form action="/news_save" method="post" enctype="multipart/form-data">
+      タイトル：<input type="text" name="title" size="100" required><br>
+      <textarea name="content" rows="10" cols="200"></textarea><br>
+
+      <input type="submit" value="送信するぜ！">
+    </form>
+    <a href="/logout">ログアウト</a>
+  </body>
+</html>

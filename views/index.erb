@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>UEHARA GUITAR SCHOOL</title>
+
+	<!-- meta -->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- css -->
+	<link rel="stylesheet" href="assets/css/jquery.rippleria.css">
+	<link href="assets/css/jquery.rippleria.min.css"/ rel="stylesheet">
+
+
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/owl.theme.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+
+	<!-- fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700|Oxygen:400,300,700' rel='stylesheet'>
+
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+</head>
+<body id="home">
+
+	<!-- ****************************** Preloader ************************** -->
+
+	<div id="preloader"></div>
+
+	<!-- ****************************** Sidebar ************************** -->
+
+	<nav id="sidebar-wrapper">
+		<a id="menu-close" href="#" class="close-btn toggle"><i class="ion-ios-close-empty"></i></a>
+	    <ul class="sidebar-nav">
+		    <li><a href="#home">Home</a></li>
+				<li><a href=news_show>News</a></li>
+			<li><a href="#features">Work</a></li>
+			<li><a href="#gallery">Gallery</a></li>
+			<li><a href="#team">You Tube</a></li>
+			<li><a href="#testimonial">Precious Reviews</a></li>
+			<li><a href="#contact">Contact us</a></li>
+			<li><a href="https://salisalinyaama.ti-da.net/">Blog</a></li>
+	    </ul>
+	</nav>
+
+	<!-- ****************************** Header ************************** -->
+
+	<header class="sticky" id="header">
+		<section class="container">
+			<section class="row" id="logo_menu">
+				<section class="col-xs-6"><a class="logo" href="">UEHARA GUITAR SCHOOL</a></section>
+				<section class="col-xs-6"><a id="menu-toggle" href="#" class="toggle wow rotateIn" data-wow-delay="1s"><i class="ion-navicon"></i></a></section>
+			</section>
+		</section>
+	</header>
+
+
+
+	<!-- ****************************** Banner ************************** -->
+
+
+	<section id="banner" >
+		<section class="container">
+			<a class="slidedown wow animated zoomIn" data-wow-delay="2s" href="#features"><i class="ion-ios-download-outline"></i></a>
+			<section class="row">
+				<div class="col-md-6">
+					<div class="headings">
+						<h1 class="wow animated fadeInDown">Let's play the guitar!</h1>
+						<p class="wow animated fadeInLeft">上原ギタースクールでは、初心者から上級者まで、幅広いレベルの方のレッスンを行なっております。初心者の方は楽譜の読み方から、上級者の方はコンクールへの出場までサポートします。</p>
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-5">
+								<div>
+									<!-- <a href="#" class="polo-btn store wow animated bounceInUp"><i class="ion-social-android"></i> Play Store</a> -->
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-5">
+								<div>
+									<!-- <a href="#" class="polo-btn store wow animated bounceInUp"><i class="ion-social-apple"></i> App Store</a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 hidden-xs hidden-sm">
+					<div class="hand-container">
+						<div class="block tac">
+					<a style="display: inline-block;" id="rippleria" href="#"><img class="iphone-hand img_res2 wow animated fadeInRightBig" data-wow-duration="1.2s" src="assets/img/sp-089749400s1475293341.jpg"></img></a>
+						</div>
+					<!-- <img class="iphone-hand img_res2 wow animated bounceInUp" data-wow-duration="1.2s" src="assets/img/sp-089749400s1475293341.jpg"></img> -->
+					<div class="clearfix"></div>
+					</div>
+				</div>
+			</section>
+		</section>
+	</section>
+
+	<!-- ****************************** News Section ************************** -->
+
+	<section id="news" class="block">
+		<section class="container">
+			<section class="row">
+				<div class="title-box"><h1 class="block-title wow animated rollIn">
+				<span class="bb-top-left"></span>
+				<span class="bb-bottom-left"></span>
+				NEWS
+				<span class="bb-top-right"></span>
+				<span class="bb-bottom-right"></span>
+				</h1></div>
+			</section>
+
+			<section class="row">
+				<% @res.each do |row| %>
+				<div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.3s">
+
+					<a href=/news_show><h3><p><%= row['time'].strftime("%Y/%m/%d %H:%M") %></p></h3></a>
+					<a href=/news_show><h2><p><%= row['title'] %></p></h2></a>
+					</div>
+				</div>
+				<% end %>
+
+						<!-- <i class="ion-ios-settings" style="color:#9b59b6;"></i> -->
+
+
+				<!-- <div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.3s"> -->
+						<!-- <i class="ion-ios-locked-outline" style="color:#d35400;"></i> -->
+						<!-- <img src="assets/img/study.png">
+						<h2>作曲講座</h2>
+						<p>音楽理論を学びながら作曲ができるようになります。</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.3s"> -->
+						<!-- <i class="ion-nuclear" style="color:#00ceb8;"></i> -->
+						<!-- <img src="assets/img/home.png">
+						<h2>貸しスタジオ</h2>
+						<p>音量を気にすることなく練習ができます。レコーディングにもお使いいただけます。</p>
+					</div>
+				</div> -->
+
+			</section>
+			<div class="clearfix"></div>
+		</section>
+	</section>
+
+
+
+	<!-- ****************************** Work Section ************************** -->
+
+	<section id="features" class="block">
+		<section class="container">
+			<section class="row">
+				<div class="title-box"><h1 class="block-title wow animated rollIn">
+				<span class="bb-top-left"></span>
+				<span class="bb-bottom-left"></span>
+				WORK
+				<span class="bb-top-right"></span>
+				<span class="bb-bottom-right"></span>
+				</h1></div>
+			</section>
+
+			<section class="row">
+				<div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.3s">
+						<!-- <i class="ion-ios-settings" style="color:#9b59b6;"></i> -->
+						<img src="assets/img/acosticGuitar.png">
+						<h2>レッスン</h2>
+						<p>ギターの演奏に必要な技術の習得を目的としています。憧れのあの曲も弾けるようになります。</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.3s">
+						<!-- <i class="ion-ios-locked-outline" style="color:#d35400;"></i> -->
+						<img src="assets/img/study.png">
+						<h2>作曲講座</h2>
+						<p>音楽理論を学びながら作曲ができるようになります。</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.3s">
+						<!-- <i class="ion-nuclear" style="color:#00ceb8;"></i> -->
+						<img src="assets/img/home.png">
+						<h2>貸しスタジオ</h2>
+						<p>音量を気にすることなく練習ができます。レコーディングにもお使いいただけます。</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.6s">
+						<img src="assets/img/deskWork.png">
+						<h2>作曲・編曲</h2>
+						<p>作曲・編曲の依頼もできます。まずはご連絡ください。</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.6s">
+						<!-- <i class="ion-ios-loop" style="color:#27ae60;"></i> -->
+						<img src="assets/img/concert.png">
+						<h2>コンサート</h2>
+						<p>定期的にコンサートを開催しております。</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.6s">
+						<!-- <i class="ion-ios-glasses" style="color:#2c3e50;"></i> -->
+							<img src="assets/img/team.png">
+						<h2>サークル活動</h2>
+						<p>各地域でサークル活動を行なっております。一人よりもみんなで練習した方がモチベーションが持続します。</p>
+					</div>
+				</div>
+			</section>
+			<div class="clearfix"></div>
+		</section>
+	</section>
+
+	<!-- ****************************** Gallery Section ************************** -->
+
+	<section id="gallery" class="block">
+		<section class="container">
+			<section class="row">
+				<div class="title-box" style="color:#fff;"><h1 class="block-title wow animated rollIn">
+				<span class="bb-top-left" style="border-color: #fff; "></span>
+				<span class="bb-bottom-left" style="border-color: #fff; "></span>
+				Gallery
+				<span class="bb-top-right" style="border-color: #fff; "></span>
+				<span class="bb-bottom-right" style="border-color: #fff; "></span>
+				</h1></div>
+			</section>
+						<section class="row">
+				<div class="col-xs-12">
+					<div id="screenshots" class="owl-carousel owl-theme">
+						<% @resPicture.each do |row| %>
+
+							<div class="item"><a href="assets/img/<%= row['filename'] %>" target="_blank"><img src="assets/img/<%= row['filename'] %>" class="img_res wow animated zoomIn"></a></div>
+			      <% end %>
+
+						<!-- <div class="item"><a href="assets/img/sp-053652400s1513648471.jpg" target="_blank"><img src="assets/img/sp-053652400s1513648471.jpg" class="img_res wow animated zoomIn"></a></div>
+						<div class="item"><a href="assets/img/sp-071673900s1539329599.jpg" target="_blank"><img src="assets/img/sp-071673900s1539329599.jpg" class="img_res wow animated zoomIn"></a></div>
+						<div class="item"><a href="assets/img/sp-002704700s1513647472.jpg" target="_blank"><img src="assets/img/sp-002704700s1513647472.jpg" class="img_res wow animated zoomIn"></a></div>
+						<div class="item"><a href="assets/img/sp-023621500s1511163928.jpg" target="_blank"><img src="assets/img/sp-023621500s1511163928.jpg" class="img_res wow animated zoomIn"></a></div>
+						<div class="item"><a href="assets/img/sp-015868800s1513584156.jpg" target="_blank"><img src="assets/img/sp-015868800s1513584156.jpg" class="img_res wow animated zoomIn"></a></div>
+						<div class="item"><a href="assets/img/sp-097199600s1480316557.jpg" target="_blank"><img src="assets/img/sp-097199600s1480316557.jpg" class="img_res wow animated zoomIn"></a></div>
+						<div class="item"><a href="assets/img/sp-089749400s1475293341.jpg" target="_blank"><img src="assets/img/sp-089749400s1475293341.jpg" class="img_res wow animated zoomIn"></a></div>
+						<div class="item"><a href="assets/img/IMG_0891.JPG" target="_blank"><img src="assets/img/IMG_0891.JPG" class="img_res wow animated zoomIn"></a></div>
+						<div class="item"><a href="assets/img/sp-066200400s1455865304.jpg" target="_blank"><img src="assets/img/sp-066200400s1455865304.jpg" class="img_res wow animated zoomIn"></a></div>
+						<div class="item"><img src="assets/img/sp-053652400s1513648471.jpg" class="img_res wow animated zoomIn"></div>
+					  <div class="item"><img src="assets/img/sp-071673900s1539329599.jpg" class="img_res wow animated zoomIn"></div>
+					  <div class="item"><img src="assets/img/sp-002704700s1513647472.jpg" class="img_res wow animated zoomIn"></div>
+					  <div class="item"><img src="assets/img/sp-023621500s1511163928.jpg" class="img_res wow animated zoomIn"></div>
+					  <div class="item"><img src="assets/img/sp-015868800s1513584156.jpg" class="img_res wow animated zoomIn"></div>
+					  <div class="item"><img src="assets/img/sp-097199600s1480316557.jpg" class="img_res wow animated zoomIn"></div>
+					  <div class="item"><img src="assets/img/sp-089749400s1475293341.jpg" class="img_res wow animated zoomIn"></div>
+					  <div class="item"><img src="assets/img/IMG_0891.JPG" class="img_res wow animated zoomIn"></div>
+					  <div class="item"><img src="assets/img/sp-066200400s1455865304.jpg" class="img_res wow animated zoomIn"></div> -->
+					</div>
+					 <div class="customNavigation">
+					  <a class="btn prev gallery-nav wow animated bounceInLeft"><i class="ion-ios-arrow-left"></i></a>
+					  <a class="btn next gallery-nav wow animated bounceInRight"><i class="ion-ios-arrow-right"></i></a>
+					</div>
+				</div>
+			</section>
+		</section>
+	</section>
+
+	<!-- ****************************** Team Section ************************** -->
+
+	<section id="team" class="block">
+		<section class="container">
+			<section class="row">
+				<div class="col-md-12">
+					<div class="title-box">
+						<h1 class="block-title wow animated rollIn">
+							<span class="bb-top-left"></span>
+							<span class="bb-bottom-left"></span>
+							YOU TUBE
+							<span class="bb-top-right"></span>
+							<span class="bb-bottom-right"></span>
+						</h1>
+					</div>
+				</div>
+			</section>
+			<div id="YOUTUBE" class="wow animated rollIn">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/rY2cgdsblDo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<!-- <iframe width="560" height="315"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+			</div>
+
+			<section class="row">
+				<section class="col-md-3 col-sm-6">
+					<div class="team-member wow animated fadeIn" data-wow-delay=="0.3s">
+						<!-- <img src="assets/img/dev-1.jpg" class="img_res team-pic">
+						<h2 class="wow animated fadeInDown" data-wow-delay=="0.7s">Rubel Saheb</h2>
+						<p class="wow animated fadeIn" data-wow-delay=="0.7s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p> -->
+						<ul class="team-social">
+							<!-- <li class="wow animated fadeInLeft facebook"><a href="#"><i class="ion-social-facebook"></i></a></li>
+							<li class="wow animated fadeInLeft linkedin"><a href="#"><i class="ion-social-linkedin"></i></a></li>
+							<li class="wow animated fadeInRight googleplus"><a href="#"><i class="ion-social-googleplus-outline"></i></a></li>
+							<li class="wow animated fadeInRight github"><a href="#"><i class="ion-social-github"></i></a></li> -->
+						</ul>
+					</div>
+				</section>
+				<section class="col-md-3 col-sm-6">
+					<div class="team-member wow animated fadeIn" data-wow-delay=="0.3s">
+						<!-- <img src="assets/img/dev-2.jpg" class="img_res team-pic">
+						<h2 class="wow animated fadeInDown" data-wow-delay=="0.7s">Rubel Saheb</h2>
+						<p class="wow animated fadeIn" data-wow-delay=="0.7s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p> -->
+						<ul class="team-social">
+							<!-- <li class="wow animated fadeInLeft facebook"><a href="#"><i class="ion-social-facebook"></i></a></li>
+							<li class="wow animated fadeInLeft linkedin"><a href="#"><i class="ion-social-linkedin"></i></a></li>
+							<li class="wow animated fadeInRight googleplus"><a href="#"><i class="ion-social-googleplus-outline"></i></a></li>
+							<li class="wow animated fadeInRight github"><a href="#"><i class="ion-social-github"></i></a></li> -->
+						</ul>
+					</div>
+				</section>
+				<section class="col-md-3 col-sm-6">
+					<div class="team-member wow animated fadeIn" data-wow-delay=="0.3s">
+						<!-- <img src="assets/img/dev-3.jpg" class="img_res team-pic">
+						<h2 class="wow animated fadeInDown" data-wow-delay=="0.7s">Rubel Saheb</h2>
+						<p class="wow animated fadeIn" data-wow-delay=="0.7s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p> -->
+						<ul class="team-social">
+							<!-- <li class="wow animated fadeInLeft facebook"><a href="#"><i class="ion-social-facebook"></i></a></li>
+							<li class="wow animated fadeInLeft linkedin"><a href="#"><i class="ion-social-linkedin"></i></a></li>
+							<li class="wow animated fadeInRight googleplus"><a href="#"><i class="ion-social-googleplus-outline"></i></a></li>
+							<li class="wow animated fadeInRight github"><a href="#"><i class="ion-social-github"></i></a></li> -->
+						</ul>
+					</div>
+				</section>
+				<section class="col-md-3 col-sm-6">
+					<div class="team-member wow animated fadeIn" data-wow-delay=="0.3s">
+						<!-- <img src="assets/img/dev-4.jpg" class="img_res team-pic"> -->
+						<!-- <h2 class="wow animated fadeInDown" data-wow-delay=="0.7s">Rubel Saheb</h2> -->
+						<!-- <p class="wow animated fadeIn" data-wow-delay=="0.7s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod -->
+						<!-- tempor incididunt ut labore et dolore magna aliqua.</p> -->
+						<ul class="team-social">
+							<!-- <li class="wow animated fadeInLeft facebook"><a href="#"><i class="ion-social-facebook"></i></a></li>
+							<li class="wow animated fadeInLeft linkedin"><a href="#"><i class="ion-social-linkedin"></i></a></li>
+							<li class="wow animated fadeInRight googleplus"><a href="#"><i class="ion-social-googleplus-outline"></i></a></li>
+							<li class="wow animated fadeInRight github"><a href="#"><i class="ion-social-github"></i></a></li> -->
+						</ul>
+					</div>
+				</section>
+			</section>
+		</section>
+	</section>
+
+	<!-- ****************************** Testimonial ************************** -->
+
+	<section id="testimonial" class="block">
+		<section class="container">
+			<section class="row">
+				<div class="title-box"><h1 class="block-title wow animated rollIn">
+				<span class="bb-top-left"></span>
+				<span class="bb-bottom-left"></span>
+				Precious Reviews
+				<span class="bb-top-right"></span>
+				<span class="bb-bottom-right"></span>
+				</h1></div>
+			</section>
+		</section>
+		<section class="container">
+			<section class="row">
+				<section class="col-xs-12">
+					<div id="review" class="owl-carousel owl-theme">
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-4 col-sm-offset-1">
+									<div class="client-pic"><img class="img_res" src="assets/img/sp-036076600s1511162552.jpg"></div>
+									<p class="review-star">
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+									</p>
+								</div>
+								<div class="col-sm-6">
+									<p class="review-desc">
+										当スクールに通う前に楽譜がある程度読め、基本的な技術を身につけていました。レッスンでは細やかな表現技法を学び、今まで弾いていた曲もさらに磨きがかかりました。
+									</p>
+									<p class="client-name">
+										k.mさん
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-4 col-sm-offset-1">
+									<div class="client-pic"><img class="img_res" src="assets/img/guitar_hikigatari_woman.png"></div>
+									<p class="review-star">
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star-outline"></i>
+									</p>
+								</div>
+								<div class="col-sm-6">
+									<p class="review-desc">
+										爆速で上手くなります
+									</p>
+									<p class="client-name">
+										k.kさん
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-4 col-sm-offset-1">
+									<div class="client-pic"><img class="img_res" src="assets/img/mexico_man.png"></div>
+									<p class="review-star">
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star-outline"></i>
+									</p>
+								</div>
+								<div class="col-sm-6">
+									<p class="review-desc">
+										上手くなりました
+									</p>
+									<p class="client-name">
+										Shahjahan Jewelさん
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-4 col-sm-offset-1">
+									<div class="client-pic"><img class="img_res" src="assets/img/music_sakkyoku_guitar_man.png"></div>
+									<p class="review-star">
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star"></i>
+										<i class="ion-ios-star-outline"></i>
+									</p>
+								</div>
+								<div class="col-sm-6">
+									<p class="review-desc">
+									めちゃめちゃ曲作ってます。
+									</p>
+									<p class="client-name">
+										太郎さん
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+		</section>
+	</section>
+
+	<!-- ****************************** Subscribe Section ************************** -->
+
+	<section id="subscribe">
+		<section class="container">
+			<section class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<p class="susbcribe-text">
+					<strong>見学・生徒随時募集中！音楽が大好きなあなたをお待ちしております！</strong><br>
+					まずはEメール、お電話にてご連絡ください。レッスン日数、時間、料金など、ご相談に応じます！
+					</p>
+				</div>
+			</section>
+		</section>
+		<section class="container subscribe-wrap">
+			<section class="row">
+				<div class="col-sm-12">
+					<div class="row">
+						<form role="form">
+							<div class="col-xs-10">
+								<div class="form-group">
+									<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<button type="submit" class="btn-custom">
+								<i class="ion-ios-arrow-thin-right"></i>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</section>
+	</section>
+
+	<!-- ****************************** Contact Section ************************** -->
+
+	<section id="contact">
+			<section class="container contact-wrap">
+				<section class="row">
+					<div class="title-box"><h1 class="block-title wow animated rollIn">
+					<span class="bb-top-left"></span>
+					<span class="bb-bottom-left"></span>
+					Contact Us
+					<span class="bb-top-right"></span>
+					<span class="bb-bottom-right"></span>
+					</h1></div>
+				</section>
+			</section>
+			<section class="address">
+				<div class="container">
+					<div class="col-sm-12">
+						<ul class="address-list">
+							<li><i class="ion-ios-location" style="background-color: rgb(255, 102, 0);"></i> <span>沖縄県<br>xxxx-999</span></li>
+							<li><i class="ion-ios-telephone" style="background-color: #63cfea;"></i> <span>xxx-xxx-xxx </span></li>
+							<li><i class="ion-email" style="background-color: #6ecba9;"></i> <span>info@domain.com</span></li>
+							<li><i class="ion-earth" style="background-color: #ff6969;"></i> <span>ueharaschool.com</span></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="mailbox">
+				<div class="container">
+					<div class="col-sm-12">
+						<form name="sentMessage" id="contactForm" novalidate>
+	                        <div class="row">
+	                            <div class="col-md-6">
+	                                <div class="form-group">
+	                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+	                                    <p class="help-block text-danger"></p>
+	                                </div>
+	                                <div class="form-group">
+	                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+	                                    <p class="help-block text-danger"></p>
+	                                </div>
+	                                <div class="form-group">
+	                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+	                                    <p class="help-block text-danger"></p>
+	                                </div>
+	                            </div>
+	                            <div class="col-md-6">
+	                                <div class="form-group">
+	                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+	                                    <p class="help-block text-danger"></p>
+	                                    <div id="success"></div>
+		                                <button type="submit" class="polo-btn contact-submit"><i class="ion-paper-airplane"></i></button>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </form>
+					</div>
+				</div>
+			</section>
+			<div class="clearfix"></div>
+		</section>
+
+		<!-- ****************************** Footer ************************** -->
+
+		<section id="footer">
+			<section class="container">
+				<section class="row">
+					<div class="col-sm-6">
+						<span>Developed By</span>
+						<h1 class="footer-logo">
+							k-miyagi
+						</h1>
+					</div>
+					<div class="col-sm-6">
+						<p class="copyright">♪♪♪♪♪♪♪♪♪♪♪♪♪</p>
+					</div>
+				</section>
+			</section>
+		</section>
+
+
+	<!-- All the scripts -->
+
+
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="assets/js/jquery.rippleria.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/owl.carousel.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script>
+	    $('#rippleria').rippleria({
+	        duration: 750,
+	        easing: 'ease-in'
+	    });
+
+	    $('#rippleria').click(function(e) {
+	        e.preventDefault();
+
+	        var randInt = function (min, max) {
+	        var rand = min + Math.random() * (max - min)
+	        rand = Math.round(rand);
+	        return rand;
+	    };
+
+	    $(this).rippleria('changeColor',
+	            'rgba('+randInt(0,200)+','+randInt(0,200)+','+randInt(0,200)+',0.'+randInt(3,5));
+	    });
+	</script>
+
+</body>
+</html>
